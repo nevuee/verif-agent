@@ -154,7 +154,7 @@ export default function VeriAgentApp() {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
                     <div>
-                        <h2 className="text-4xl font-bold text-black mb-2">0xVRA <span className="text-gray-500 font-light">Explorer</span></h2>
+                        <h2 className="text-4xl font-bold text-black mb-2">0xVRE <span className="text-gray-500 font-light">Explorer</span></h2>
                         <p className="text-gray-600">Explore registered agents, verify proofs, and monitor network status.</p>
                     </div>
 
@@ -357,7 +357,6 @@ export default function VeriAgentApp() {
                         {activeTab === 'node' && (
                             <motion.div key="node" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="p-8 h-full bg-white flex flex-col">
                                 <div className="grid md:grid-cols-3 gap-6 mb-8">
-                                    {/* Stats Cards */}
                                     {/* Stats Cards */}
                                     <div className="bg-white p-6 rounded-xl border border-gray-200 relative overflow-hidden group shadow-sm hover:shadow-md transition-all">
                                         <div className="absolute right-0 top-0 p-4 opacity-5 group-hover:scale-110 transition-transform"><Activity className="w-16 h-16 text-black" /></div>

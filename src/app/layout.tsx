@@ -17,13 +17,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "0xVRA | Proof-of-Reasoning Layer",
+  title: "0xVRE | Proof-of-Reasoning Layer",
   description: "The accountability layer for autonomous AI agents. Verify reasoning execution with ZK-SNARKs.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "0xVRA",
+    title: "0xVRE",
   },
   icons: {
     icon: "/favicon-whatsapp.jpeg",

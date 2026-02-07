@@ -10,7 +10,7 @@ export default function SecurityPage() {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-3xl mx-auto mb-20 pt-24">
                 <h1 className="text-4xl md:text-5xl font-bold text-black mb-6">Security Center</h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                    Security is our top priority. Help us secure the 0xVRA protocol and get rewarded.
+                    Security is our top priority. Help us secure the 0xVRE protocol and get rewarded.
                 </p>
             </motion.div>
 

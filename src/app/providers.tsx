@@ -22,7 +22,7 @@ import { WagmiProvider } from 'wagmi';
 const { wallets } = getDefaultWallets();
 
 const config = getDefaultConfig({
-    appName: '0xVRA',
+    appName: '0xVRE',
     projectId: 'YOUR_PROJECT_ID', // Note: User will need to replace this eventually, but it works without for testing often or with public IDs
     wallets: [
         ...wallets,

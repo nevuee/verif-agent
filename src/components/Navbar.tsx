@@ -33,19 +33,18 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-9 h-9">
               <Image
                 src="/vra_1.svg"
-                alt="0xVRA Logo"
+                alt="0xVRE Logo"
                 width={36}
                 height={36}
                 className="w-full h-full object-contain transition-transform group-hover:scale-110"
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-black group-hover:text-gray-700 transition-colors">0xVRA</span>
+              <span className="text-xl font-bold tracking-tight text-black group-hover:text-gray-700 transition-colors">0xVRE</span>
               <p className="text-[10px] text-gray-500 font-medium">Proof-of-Reasoning Layer</p>
             </div>
           </Link>
@@ -171,16 +170,16 @@ export default function Navbar() {
               exit={{ opacity: 0, y: -20 }}
               className="md:hidden mt-4 py-4 px-4 space-y-3 bg-white/95 backdrop-blur-md rounded-lg border border-black/5 shadow-xl"
             >
-              <a href="/#features" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-300 hover:text-white transition-colors py-2">
+              <a href="/#features" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-600 hover:text-black transition-colors py-2">
                 Features
               </a>
-              <a href="/#registry" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-300 hover:text-white transition-colors py-2">
+              <a href="/#registry" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-600 hover:text-black transition-colors py-2">
                 Agent Registry
               </a>
-              <a href="/#verify" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-300 hover:text-white transition-colors py-2">
+              <a href="/#verify" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-600 hover:text-black transition-colors py-2">
                 Simulate & Verify
               </a>
-              <a href="/docs" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-300 hover:text-white transition-colors py-2">
+              <a href="/docs" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-600 hover:text-black transition-colors py-2">
                 Docs
               </a>
               <ConnectButton.Custom>

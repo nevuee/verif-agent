@@ -1,6 +1,6 @@
 {
-  "name": "0xVRA | Proof-of-Reasoning Layer",
-  "short_name": "0xVRA",
+  "name": "0xVRE | Proof-of-Reasoning Layer",
+  "short_name": "0xVRE",
   "description": "The accountability layer for autonomous AI agents. Verify reasoning execution with ZK-SNARKs.",
   "start_url": "/",
   "display": "standalone",

@@ -53,7 +53,7 @@ export default function Solution() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.15 }}
-                            className="relative relative z-10"
+                            className="relative z-10"
                         >
                             <div className="w-20 h-20 mx-auto bg-white border border-black/10 rounded-2xl flex items-center justify-center text-black mb-6 shadow-xl shadow-gray-200">
                                 {step.icon}

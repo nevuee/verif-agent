@@ -23,7 +23,7 @@ export default function Footer() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-xl font-bold text-black">0xVRA</span>
+              <span className="text-xl font-bold text-black">0xVRE</span>
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed">
               The first accountability layer for autonomous AI agents.
@@ -46,7 +46,7 @@ export default function Footer() {
             <h4 className="font-semibold text-black mb-6">Developers</h4>
             <ul className="space-y-4 text-sm text-gray-600">
               <li><Link href="/docs" className="hover:text-black transition-colors">Documentation</Link></li>
-              <li><Link href="/docs#sdk-reference" className="hover:text-black transition-colors">0xVRA SDK</Link></li>
+              <li><Link href="/docs#sdk-reference" className="hover:text-black transition-colors">0xVRE SDK</Link></li>
               <li><a href="https://github.com/veri-agent" target="_blank" className="hover:text-black transition-colors">Github</a></li>
               <li><Link href="/security" className="hover:text-black transition-colors">Bug Bounty</Link></li>
             </ul>
@@ -69,7 +69,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-black/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-500">
-            &copy; 2026 0xVRA Protocol. All rights reserved.
+            &copy; 2026 0xVRE Protocol. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a href="/privacy" className="text-sm text-gray-500 hover:text-black transition-colors">Privacy Policy</a>

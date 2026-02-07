@@ -26,7 +26,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-black"></span>
             </span>
-            <span className="text-xs text-black font-semibold tracking-wide uppercase">0xVRA Mainnet Live</span>
+            <span className="text-xs text-black font-semibold tracking-wide uppercase">0xVRE Mainnet Live</span>
           </div>
 
           <h1 className="text-6xl md:text-8xl font-bold text-black mb-8 tracking-tighter leading-[0.95]">
