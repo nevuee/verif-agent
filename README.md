@@ -1,59 +1,71 @@
-# Claw Quants 🦞
+# 0xVRE - The Accountability Layer for Autonomous AI
 
-**Autonomous AI Agents for Quantitative Trading.**
+![0xVRE Banner](public/0xvre-maskot.png)
 
-Claw Quants is a next-generation decentralized trading infrastructure where autonomous AI agents collaborate with human traders to achieve superior market performance. Deploy intelligent trading bots that operate continuously, backed by real-time market simulations and verifiable on-chain performance metrics.
+> **Trustless AI, Verified.**
+> The first accountability layer for autonomous AI agents. Trust, verify, and trace every decision on-chain.
 
-![Claw Quants Banner](public/clawquants.png)
+## Overview
+
+As AI agents become increasingly autonomous, executing financial transactions and governance decisions, the "black box" problem becomes a critical risk. **0xVRE** solves this by providing a decentralized infrastructure where every agentic decision is accompanied by a **cryptographic proof (zk-SNARK/STARK)**.
+
+This ensures that agents adhere to their registered logic and safety constraints without revealing their proprietary model weights or private data.
 
 ## Key Features
 
-*   **Autonomous AI Agents**: Deploy trading bots with distinct personalities, algorithmic strategies (Scalping, Trend Following, Arbitrage), and adaptive risk profiles.
-*   **Live Market Simulation**: Experience a high-fidelity trading environment with dynamic price action, volatility modeling, and momentum handled by our proprietary simulation engine.
-*   **Real-time Leaderboard**: Track top-performing AI agents with live PnL, Win Rate, and Volume metrics updated instantaneously.
-*   **Immersive Visualization**: Features a custom-built 3D "Light Pillar" visualization (Three.js & GLSL) representing market liquidity and AI activity.
-*   **Advanced UX Architecture**: Built with glassmorphism design principles, fluid motion (Framer Motion), and responsive layouts.
+-   **Proof-of-Reasoning (PoR)**: A protocol that mandates a "Reasoning Trace" (Inputs → Deductions → Logic) for every action, verified via Zero-Knowledge Proofs.
+-   **Slashing Mechanism**: Agents stake **$VERI** tokens. If a proof is challenged and found invalid (harmful or illogical), the stake is slashed.
+-   **Privacy-First Verification**: Verify *that* an agent followed the rules without knowing *how* it thinks. Your IP remains safe.
+-   **Decentralized Verifier Nodes**: A network of nodes that mathematically verify ZK proofs before authorizing transaction signing.
+-   **Soulbound Identity**: Agents mint a Soulbound Token (SBT) as an immutable on-chain identity.
 
-## Technology Stack
+## Tech Stack
 
-*   **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
-*   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-*   **3D Graphics**: [Three.js](https://threejs.org/) & [React Three Fiber](https://docs.pmnd.rs/react-three-fiber)
-*   **Animations**: [Framer Motion](https://www.framer.com/motion/)
-*   **Data Visualization**: [Recharts](https://recharts.org/)
-*   **Icons**: [Lucide React](https://lucide.dev/)
+-   **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+-   **Language**: [TypeScript](https://www.typescriptlang.org/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **Animations**: [Framer Motion](https://www.framer.com/motion/)
+-   **Web3 Integration**: [Wagmi](https://wagmi.sh/) & [Viem](https://viem.sh/)
+-   **Wallet Connection**: [RainbowKit](https://www.rainbowkit.com/)
+-   **Icons**: [Lucide React](https://lucide.dev/)
 
 ## Getting Started
 
-Claw Quants is built with modern web technologies. To run the project locally:
+To run the 0xVRE frontend locally:
 
-1.  **Clone the repository**
+1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/claw-quants.git
-    cd claw-quants
+    git clone https://github.com/your-username/0xvre.git
+    cd 0xvre
     ```
 
-2.  **Install dependencies**
+2.  **Install dependencies**:
     ```bash
-    npm install
-    # or
     bun install
-    ```
-
-3.  **Run the development server**
-    ```bash
-    npm run dev
     # or
-    bun run dev
+    npm install
     ```
 
-4.  **Open in Browser**
-    Navigate to [http://localhost:3000](http://localhost:3000) to verify the installation.
+3.  **Run the development server**:
+    ```bash
+    bun run dev
+    # or
+    npm run dev
+    ```
 
-## Disclaimer
+4.  Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project contains a **Market Simulator** (`src/components/simulation/`) for demonstration purposes. The trading data, ROI, and Win Rates shown are currently generated for simulation and interface validation.
+## How It Works
 
----
+1.  **Agent Registration**: Agent mints an ID and stakes assets.
+2.  **Reasoning Trace**: Agent generates a signed trace of its logic for a task.
+3.  **ZK Verification**: A ZK proof is generated to prove adherence to safety rules.
+4.  **Execution**: Verifier nodes validate the proof on-chain. Valid? Execute. Invalid? Slash.
 
-*Copyright © 2024 Claw Quants. All rights reserved.*
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
