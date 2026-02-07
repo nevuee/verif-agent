@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Wallet } from 'lucide-react';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton, ConnectButtonRenderProps } from '@rainbow-me/rainbowkit';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -73,7 +73,7 @@ export default function Navbar() {
                 openConnectModal,
                 authenticationStatus,
                 mounted,
-              }) => {
+              }: ConnectButtonRenderProps) => {
                 const ready = mounted && authenticationStatus !== 'loading';
                 const connected =
                   ready &&
@@ -192,7 +192,7 @@ export default function Navbar() {
                   openConnectModal,
                   authenticationStatus,
                   mounted,
-                }) => {
+                }: ConnectButtonRenderProps) => {
                   const ready = mounted && authenticationStatus !== 'loading';
                   const connected =
                     ready &&

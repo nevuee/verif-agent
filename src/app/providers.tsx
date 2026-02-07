@@ -15,7 +15,7 @@ import {
 import {
     mainnet,
     sepolia,
-} from 'wagmi/chains';
+} from 'viem/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { WagmiProvider } from 'wagmi';
 
