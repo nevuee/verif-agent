@@ -7,6 +7,7 @@ import ProblemStatement from '@/components/ProblemStatement';
 import Solution from '@/components/Solution';
 import FAQ from '@/components/FAQ';
 
+
 // Lazy load heavy component
 const VeriAgentApp = dynamic(() => import('@/components/VeriAgentApp'), {
   loading: () => (

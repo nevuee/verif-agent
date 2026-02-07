@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ShieldCheck, Activity, Lock, FileCode } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -60,6 +61,45 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Floating Elements (Images) */}
+
+      {/* Left Mascot (Mirrored) - Desktop Only */}
+      <motion.div
+        initial={{ opacity: 0, x: -50, y: 50 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="absolute bottom-0 left-0 md:left-[5%] hidden md:block pointer-events-none z-0 translate-y-[10%]"
+      >
+        <div className="relative w-64 h-64 md:w-[500px] md:h-[500px] scale-x-[-1]">
+          <Image
+            src="/0xvre-maskot.png"
+            alt="0xVRE Mascot Left"
+            fill
+            className="object-contain drop-shadow-2xl"
+            priority
+          />
+        </div>
+      </motion.div>
+
+      {/* Right Mascot - Visible on Mobile & Desktop */}
+      <motion.div
+        initial={{ opacity: 0, x: 50, y: 50 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ delay: 0.7, duration: 1 }}
+        className="absolute bottom-0 right-0 md:right-[5%] block pointer-events-none z-0 translate-y-[10%]"
+      >
+        <div className="relative w-64 h-64 md:w-[500px] md:h-[500px]">
+          <Image
+            src="/0xvre-maskot.png"
+            alt="0xVRE Mascot Right"
+            fill
+            className="object-contain drop-shadow-2xl"
+            priority
+          />
+        </div>
+      </motion.div>
+
     </section>
   );
 }

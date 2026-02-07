@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
+import Image from 'next/image';
+
 
 const faqs = [
     {
@@ -27,7 +29,30 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section id="faq" className="py-24 bg-gray-50 relative overflow-hidden">
+        <section id="faq" className="py-24 bg-gray-50 relative overflow-hidden" style={{ clipPath: 'inset(0)' }}>
+            {/* Fixed Background Token (Optimized) */}
+            <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 opacity-[0.15]">
+                <motion.div
+                    animate={{
+                        rotate: 360,
+                        scale: [1, 1.05, 1]
+                    }}
+                    transition={{
+                        rotate: { duration: 100, repeat: Infinity, ease: "linear" },
+                        scale: { duration: 8, repeat: Infinity, ease: "easeInOut" }
+                    }}
+                    className="relative w-[500px] h-[500px] md:w-[1000px] md:h-[1000px]"
+                >
+                    <Image
+                        src="/TOKEN.png"
+                        alt="0xVRE Token"
+                        fill
+                        className="object-contain"
+                        priority
+                    />
+                </motion.div>
+            </div>
+
             <div className="max-w-3xl mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm mb-6">
@@ -80,6 +105,9 @@ export default function FAQ() {
                     ))}
                 </div>
             </div>
+
+
+
         </section>
     );
 }
