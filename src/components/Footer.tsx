@@ -16,7 +16,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 flex items-center justify-center">
                 <Image
-                  src="/brand-icon.svg"
+                  src="/vra_1.svg"
                   alt="VeriAgent Logo"
                   width={32}
                   height={32}

@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     title: "0xVRA",
   },
   icons: {
-    icon: "/brand-icon.svg",
-    shortcut: "/brand-icon.svg",
-    apple: "/brand-icon.svg",
+    icon: "/favicon-whatsapp.jpeg",
+    shortcut: "/favicon-whatsapp.jpeg",
+    apple: "/favicon-whatsapp.jpeg",
   },
 };
 

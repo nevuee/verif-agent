@@ -4,8 +4,8 @@
   "description": "The accountability layer for autonomous AI agents. Verify reasoning execution with ZK-SNARKs.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#171717",
-  "theme_color": "#171717",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "orientation": "portrait-primary",
   "icons": [
     {
@@ -15,9 +15,9 @@
       "purpose": "any maskable"
     },
     {
-      "src": "/brand-icon.svg",
+      "src": "/favicon-whatsapp.jpeg",
       "sizes": "any",
-      "type": "image/svg+xml",
+      "type": "image/jpeg",
       "purpose": "any maskable"
     }
   ]

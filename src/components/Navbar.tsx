@@ -34,20 +34,19 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            {/* VeriAgent Logo */}
-            <div className="relative w-10 h-10 flex items-center justify-center">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-9 h-9">
               <Image
-                src="/brand-icon.svg"
-                alt="VeriAgent Logo"
-                width={40}
-                height={40}
-                className="w-full h-full object-contain"
+                src="/vra_1.svg"
+                alt="0xVRA Logo"
+                width={36}
+                height={36}
+                className="w-full h-full object-contain transition-transform group-hover:scale-110"
               />
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-black">0xVRA</h1>
-              <p className="text-xs text-secondary">Proof-of-Reasoning Layer</p>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold tracking-tight text-black group-hover:text-gray-700 transition-colors">0xVRA</span>
+              <p className="text-[10px] text-gray-500 font-medium">Proof-of-Reasoning Layer</p>
             </div>
           </Link>
 
@@ -164,90 +163,92 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="md:hidden mt-4 py-4 px-4 space-y-3 bg-white/95 backdrop-blur-md rounded-lg border border-black/5 shadow-xl"
-          >
-            <a href="/#features" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-300 hover:text-white transition-colors py-2">
-              Features
-            </a>
-            <a href="/#registry" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-300 hover:text-white transition-colors py-2">
-              Agent Registry
-            </a>
-            <a href="/#verify" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-300 hover:text-white transition-colors py-2">
-              Simulate & Verify
-            </a>
-            <a href="/docs" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-300 hover:text-white transition-colors py-2">
-              Docs
-            </a>
-            <ConnectButton.Custom>
-              {({
-                account,
-                chain,
-                openAccountModal,
-                openChainModal,
-                openConnectModal,
-                authenticationStatus,
-                mounted,
-              }) => {
-                const ready = mounted && authenticationStatus !== 'loading';
-                const connected =
-                  ready &&
-                  account &&
-                  chain &&
-                  (!authenticationStatus ||
-                    authenticationStatus === 'authenticated');
+        {
+          mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="md:hidden mt-4 py-4 px-4 space-y-3 bg-white/95 backdrop-blur-md rounded-lg border border-black/5 shadow-xl"
+            >
+              <a href="/#features" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-300 hover:text-white transition-colors py-2">
+                Features
+              </a>
+              <a href="/#registry" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-300 hover:text-white transition-colors py-2">
+                Agent Registry
+              </a>
+              <a href="/#verify" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-300 hover:text-white transition-colors py-2">
+                Simulate & Verify
+              </a>
+              <a href="/docs" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-gray-300 hover:text-white transition-colors py-2">
+                Docs
+              </a>
+              <ConnectButton.Custom>
+                {({
+                  account,
+                  chain,
+                  openAccountModal,
+                  openChainModal,
+                  openConnectModal,
+                  authenticationStatus,
+                  mounted,
+                }) => {
+                  const ready = mounted && authenticationStatus !== 'loading';
+                  const connected =
+                    ready &&
+                    account &&
+                    chain &&
+                    (!authenticationStatus ||
+                      authenticationStatus === 'authenticated');
 
-                if (!ready) return null;
+                  if (!ready) return null;
 
-                if (!connected) {
+                  if (!connected) {
+                    return (
+                      <button
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          openConnectModal();
+                        }}
+                        className="w-full px-6 py-3 bg-primary rounded-lg text-sm font-semibold text-white flex items-center justify-center gap-2"
+                      >
+                        <Wallet className="w-4 h-4" />
+                        Connect Wallet
+                      </button>
+                    );
+                  }
+
+                  if (chain.unsupported) {
+                    return (
+                      <button
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          openChainModal();
+                        }}
+                        className="w-full px-6 py-3 bg-red-500 rounded-lg text-sm font-semibold text-white"
+                      >
+                        Wrong network
+                      </button>
+                    );
+                  }
+
                   return (
                     <button
                       onClick={() => {
                         setMobileMenuOpen(false);
-                        openConnectModal();
+                        openAccountModal();
                       }}
-                      className="w-full px-6 py-3 bg-primary rounded-lg text-sm font-semibold text-white flex items-center justify-center gap-2"
+                      className="w-full px-6 py-3 bg-gray-800 border border-white/10 rounded-lg text-sm font-semibold text-white flex items-center justify-center gap-2"
                     >
-                      <Wallet className="w-4 h-4" />
-                      Connect Wallet
+                      {account.displayName}
                     </button>
                   );
-                }
-
-                if (chain.unsupported) {
-                  return (
-                    <button
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        openChainModal();
-                      }}
-                      className="w-full px-6 py-3 bg-red-500 rounded-lg text-sm font-semibold text-white"
-                    >
-                      Wrong network
-                    </button>
-                  );
-                }
-
-                return (
-                  <button
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                      openAccountModal();
-                    }}
-                    className="w-full px-6 py-3 bg-gray-800 border border-white/10 rounded-lg text-sm font-semibold text-white flex items-center justify-center gap-2"
-                  >
-                    {account.displayName}
-                  </button>
-                );
-              }}
-            </ConnectButton.Custom>
-          </motion.div>
-        )}
-      </div>
-    </motion.nav>
+                }}
+              </ConnectButton.Custom>
+            </motion.div>
+          )
+        }
+      </div >
+    </motion.nav >
   );
 }

@@ -158,12 +158,12 @@ export default function VeriAgentApp() {
                         <p className="text-gray-600">Explore registered agents, verify proofs, and monitor network status.</p>
                     </div>
 
-                    <div className="flex p-1 bg-gray-100 rounded-xl border border-gray-200">
+                    <div className="flex p-1.5 bg-gray-50/50 backdrop-blur-md rounded-2xl border border-gray-200/50 shadow-inner">
                         {['registry', 'simulate', 'node'].map((tab) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab as any)}
-                                className={`px-6 py-2 rounded-lg text-sm font-medium transition-all capitalize ${activeTab === tab ? 'bg-black text-white shadow-lg' : 'text-gray-500 hover:text-black'}`}
+                                className={`px-6 py-2.5 rounded-xl text-sm font-semibold transition-all capitalize duration-300 ${activeTab === tab ? 'bg-white text-black shadow-lg shadow-black/5 ring-1 ring-black/5 scale-[1.02]' : 'text-gray-500 hover:text-black hover:bg-white/50'}`}
                             >
                                 {tab === 'registry' ? 'Agent Registry' : tab === 'simulate' ? 'Task Simulator' : 'Node Status'}
                             </button>
@@ -184,7 +184,7 @@ export default function VeriAgentApp() {
                                             value={searchTerm}
                                             onChange={(e) => setSearchTerm(e.target.value)}
                                             placeholder="Search agents by ID, type, or name..."
-                                            className="w-full bg-white border border-gray-200 rounded-xl py-3 pl-12 pr-4 text-black placeholder-gray-400 focus:outline-none focus:border-black/50 focus:ring-1 focus:ring-black/5 transition-all"
+                                            className="w-full bg-gray-50/50 border border-gray-200 rounded-2xl py-3.5 pl-12 pr-4 text-black placeholder-gray-400 focus:outline-none focus:border-black focus:ring-4 focus:ring-gray-100 transition-all hover:bg-white"
                                         />
                                     </div>
                                     <div className="flex gap-3">
@@ -214,38 +214,42 @@ export default function VeriAgentApp() {
                                         <motion.div
                                             initial={{ opacity: 0, y: 10 }}
                                             animate={{ opacity: 1, y: 0 }}
+                                            whileHover={{ y: -5, boxShadow: "0 20px 40px -15px rgba(0,0,0,0.1)" }}
                                             key={agent.id}
-                                            className="p-5 bg-white rounded-xl border border-gray-200 hover:border-black/30 transition-all group cursor-pointer hover:shadow-lg flex flex-col justify-between"
+                                            className="p-5 bg-white rounded-2xl border border-gray-100/80 hover:border-black/10 transition-all group cursor-pointer shadow-sm flex flex-col justify-between relative overflow-hidden"
                                         >
-                                            <div className="flex justify-between items-start mb-4">
+                                            <div className="absolute top-0 right-0 p-20 bg-gradient-to-bl from-gray-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-bl-full pointer-events-none" />
+
+                                            <div className="flex justify-between items-start mb-4 relative z-10">
                                                 <div className="flex items-center gap-3">
-                                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-black to-gray-700 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                                                    <div className="w-12 h-12 rounded-xl bg-black text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-black/20 group-hover:scale-110 transition-transform duration-300">
                                                         {agent.name.charAt(0)}
                                                     </div>
                                                     <div>
-                                                        <h4 className="text-sm font-bold text-black group-hover:text-gray-700 transition-colors truncate max-w-[120px]">{agent.name}</h4>
+                                                        <h4 className="text-sm font-bold text-black group-hover:text-gray-800 transition-colors truncate max-w-[120px]">{agent.name}</h4>
                                                         <div className="flex items-center gap-2 text-[10px] text-gray-500 mt-1">
-                                                            <span className="font-mono bg-gray-100 px-1.5 py-0.5 rounded">{agent.id}</span>
+                                                            <span className="font-mono bg-gray-100 px-1.5 py-0.5 rounded border border-gray-200">{agent.id}</span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className={`px-2 py-0.5 rounded text-[10px] font-bold border ${agent.status === 'Verified' ? 'bg-green-500/10 text-green-500 border-green-500/20' :
-                                                    agent.status === 'Probation' ? 'bg-yellow-500/10 text-yellow-500 border-yellow-500/20' :
-                                                        'bg-red-500/10 text-red-500 border-red-500/20'
+                                                <div className={`px-2.5 py-1 rounded-full text-[10px] font-bold border flex items-center gap-1.5 ${agent.status === 'Verified' ? 'bg-green-50 text-green-700 border-green-200' :
+                                                    agent.status === 'Probation' ? 'bg-yellow-50 text-yellow-700 border-yellow-200' :
+                                                        'bg-red-50 text-red-700 border-red-200'
                                                     }`}>
+                                                    <span className={`w-1.5 h-1.5 rounded-full ${agent.status === 'Verified' ? 'bg-green-500' : agent.status === 'Probation' ? 'bg-yellow-500' : 'bg-red-500'}`} />
                                                     {agent.status}
                                                 </div>
                                             </div>
 
-                                            <div className="flex items-center gap-2 text-xs text-black mb-4 bg-gray-100 p-2 rounded-lg">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-black" />
+                                            <div className="flex items-center gap-2 text-xs text-gray-700 mb-4 bg-gray-50 p-2.5 rounded-xl border border-gray-100 relative z-10">
+                                                <Activity className="w-3 h-3" />
                                                 {agent.type}
                                             </div>
 
-                                            <div className="grid grid-cols-3 gap-2 border-t border-gray-100 pt-3">
-                                                <div><div className="text-gray-500 text-[10px] mb-0.5">Reputation</div><div className="text-black font-mono font-bold text-sm">{agent.reputation}</div></div>
-                                                <div><div className="text-gray-500 text-[10px] mb-0.5">Staked</div><div className="text-black font-mono font-bold text-sm">{agent.stake}</div></div>
-                                                <div><div className="text-gray-500 text-[10px] mb-0.5">Uptime</div><div className="text-green-600 font-mono font-bold text-sm">{agent.uptime}</div></div>
+                                            <div className="grid grid-cols-3 gap-2 border-t border-gray-100 pt-3 relative z-10">
+                                                <div><div className="text-gray-400 text-[10px] uppercase tracking-wider mb-1 font-semibold">Reputation</div><div className="text-black font-mono font-bold text-sm">{agent.reputation}</div></div>
+                                                <div><div className="text-gray-400 text-[10px] uppercase tracking-wider mb-1 font-semibold">Staked</div><div className="text-black font-mono font-bold text-sm">{agent.stake}</div></div>
+                                                <div><div className="text-gray-400 text-[10px] uppercase tracking-wider mb-1 font-semibold">Uptime</div><div className="text-green-600 font-mono font-bold text-sm">{agent.uptime}</div></div>
                                             </div>
                                         </motion.div>
                                     ))}
