@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     title: "0xVRE",
   },
   icons: {
-    icon: "/Logo%20vra_1.svg",
-    shortcut: "/Logo%20vra_1.svg",
-    apple: "/Logo%20vra_1.svg",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
