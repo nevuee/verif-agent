@@ -13,7 +13,7 @@ const STATUSES = ['Verified', 'Verified', 'Verified', 'Probation', 'Verified', '
 
 const generateMockAgents = (count: number) => {
     return Array.from({ length: count }).map((_, i) => {
-        const id = `AG-${Math.floor(Math.random() * 9000) + 1000}`;
+        const id = `AG-${Date.now()}-${i}`; // Guaranteed unique ID
         const type = AGENT_TYPES[Math.floor(Math.random() * AGENT_TYPES.length)];
         const status = STATUSES[Math.floor(Math.random() * STATUSES.length)];
         const reputation = Math.floor(Math.random() * 20) + 80; // 80-99
@@ -395,7 +395,7 @@ export default function VeriAgentApp() {
                                             )}
 
                                             {deployLogs.map((log, i) => (
-                                                <div key={i} className={`flex items-start gap-3 ${log.text.includes('✅') ? 'text-green-400 font-bold bg-green-900/10 p-2 rounded -mx-2 border border-green-900/20' : log.text.includes('❌') ? 'text-red-400 font-bold bg-red-900/10 p-2 rounded -mx-2 border border-red-900/20' : 'text-gray-400'}`}>
+                                                <div key={i} suppressHydrationWarning className={`flex items-start gap-3 ${log.text.includes('✅') ? 'text-green-400 font-bold bg-green-900/10 p-2 rounded -mx-2 border border-green-900/20' : log.text.includes('❌') ? 'text-red-400 font-bold bg-red-900/10 p-2 rounded -mx-2 border border-red-900/20' : 'text-gray-400'}`}>
                                                     <span className="text-gray-600 select-none mt-0.5 text-[10px] whitespace-nowrap">[{log.time}]</span>
                                                     <span className="text-gray-700 select-none mt-0.5">$</span>
                                                     <span>{log.text}</span>
@@ -553,7 +553,7 @@ export default function VeriAgentApp() {
                                                 </div>
                                             )}
                                             {simLogs.map((log, i) => (
-                                                <div key={i} className="mb-2 text-gray-700">
+                                                <div key={i} suppressHydrationWarning className="mb-2 text-gray-700">
                                                     <span className="text-gray-400 mr-2">[{log.time}]</span>
                                                     {log.text.startsWith('>') ? <span className="text-black font-bold">{log.text}</span> : log.text}
                                                 </div>
@@ -630,7 +630,7 @@ export default function VeriAgentApp() {
                                 </div>
                                 <div ref={nodeLogContainerRef} className="flex-1 font-mono text-xs overflow-y-auto custom-scrollbar space-y-1.5 p-4 bg-gray-50 rounded-xl border border-gray-200">
                                     {nodeLogs.map((log, i) => (
-                                        <div key={i} className="text-gray-600">{log}</div>
+                                        <div key={i} suppressHydrationWarning className="text-gray-600">{log}</div>
                                     ))}
                                 </div>
                             </motion.div>
