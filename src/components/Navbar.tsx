@@ -45,7 +45,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold tracking-tight text-black group-hover:text-gray-700 transition-colors">0xVRE</span>
-              <p className="text-[10px] text-gray-500 font-medium">Proof-of-Reasoning Layer</p>
+              <p className="text-[10px] text-gray-500 font-medium">x402 Proof-of-Reasoning Layer</p>
             </div>
           </Link>
 

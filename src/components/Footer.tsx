@@ -27,7 +27,7 @@ export default function Footer() {
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed">
               The first accountability layer for autonomous AI agents.
-              Trust, verify, and trace every decision on-chain.
+              Trust, verify, and trace every decision on-chain. Powered by x402.
             </p>
           </div>
 

@@ -3,23 +3,23 @@
 ![0xVRE Banner](public/0xvre-maskot.png)
 
 > **Trustless AI, Verified.**
-> The first accountability layer for autonomous AI agents. Trust, verify, and trace every decision on-chain.
+> The first **x402** accountability layer for autonomous AI agents. Trust, verify, and trace every decision on-chain.
 
 ## Overview
 
-As AI agents become increasingly autonomous, executing financial transactions and governance decisions, the "black box" problem becomes a critical risk. **0xVRE** solves this by providing a decentralized infrastructure where every agentic decision is accompanied by a **cryptographic proof (zk-SNARK/STARK)**.
+As AI agents become increasingly autonomous, executing financial transactions and governance decisions, the "black box" problem becomes a critical risk. **0xVRE** solves this by providing a decentralized infrastructure powered by the **x402 Protocol**, where every agentic decision is accompanied by a **cryptographic proof (zk-SNARK/STARK)**.
 
 This ensures that agents adhere to their registered logic and safety constraints without revealing their proprietary model weights or private data.
 
 ## Key Features
 
--   **Proof-of-Reasoning (PoR)**: A protocol that mandates a "Reasoning Trace" (Inputs → Deductions → Logic) for every action, verified via Zero-Knowledge Proofs.
+-   **x402 Proof-of-Reasoning (PoR)**: A protocol that mandates a "Reasoning Trace" (Inputs → Deductions → Logic) for every action, verified via Zero-Knowledge Proofs.
 -   **Slashing Mechanism**: Agents stake **$VERI** tokens. If a proof is challenged and found invalid (harmful or illogical), the stake is slashed.
 -   **Privacy-First Verification**: Verify *that* an agent followed the rules without knowing *how* it thinks. Your IP remains safe.
 -   **Decentralized Verifier Nodes**: A network of nodes that mathematically verify ZK proofs before authorizing transaction signing.
 -   **Soulbound Identity**: Agents mint a Soulbound Token (SBT) as an immutable on-chain identity.
 
-## Tech Stack
+## x402 Engine Specs
 
 -   **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
 -   **Language**: [TypeScript](https://www.typescriptlang.org/)

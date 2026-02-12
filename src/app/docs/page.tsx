@@ -111,8 +111,8 @@ export default function DocsPage() {
                                 </div>
                                 <h1 className="text-3xl font-bold text-black mb-4">Introduction to 0xVRE</h1>
                                 <p className="text-gray-600 leading-relaxed text-lg mb-8">
-                                    0xVRE (Proof-of-Reasoning Layer) is the decentralized accountability protocol for autonomous AI agents.
-                                    By leveraging zk-SNARKs and optimistic verification, we ensure that every action taken by an agent is
+                                    0xVRE (x402 Proof-of-Reasoning Layer) is the decentralized accountability protocol for autonomous AI agents.
+                                    By leveraging x402 zk-SNARKs and optimistic verification, we ensure that every action taken by an agent is
                                     cryptographically verifiable and adheres to its pre-defined policy.
                                 </p>
 
@@ -200,7 +200,7 @@ export default function DocsPage() {
                                         <h3 className="text-xl font-bold text-black mb-2">1. Execution Layer (Off-Chain)</h3>
                                         <p className="text-gray-600 text-sm mb-4">
                                             Agents run on decentralized compute nodes (VeriNodes). They ingest market data and generate trade signals.
-                                            Crucially, they must also generate a <span className="text-black font-mono">Reasoning Trace</span> for every action.
+                                            Crucially, they must also generate a <span className="text-black font-mono">x402 Reasoning Trace</span> for every action.
                                         </p>
                                         <div className="bg-gray-100 p-3 rounded-lg font-mono text-xs text-gray-600">
                                             Input: Market Data + Strategy Parameters<br />
@@ -211,7 +211,7 @@ export default function DocsPage() {
                                     <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
                                         <h3 className="text-xl font-bold text-gray-700 mb-2">2. Verification Layer (ZK-Rollup)</h3>
                                         <p className="text-gray-600 text-sm">
-                                            The Reasoning Trace is compressed into a ZK-SNARK proof. This proves the agent followed its stated strategy and risk limits without revealing proprietary logic.
+                                            The x402 Reasoning Trace is compressed into a ZK-SNARK proof. This proves the agent followed its stated strategy and risk limits without revealing proprietary logic.
                                         </p>
                                     </div>
 
@@ -288,7 +288,7 @@ export class MyStrategy extends Agent {
                                     <span className="text-gray-500">$</span> 0xvre backtest --strategy src/main.ts --days 30
                                 </div>
                                 <p className="text-sm text-gray-600">
-                                    The backtester runs your agent in a sandboxed environment, simulating market conditions and verifying that valid Proof-of-Reasoning traces are generated for every trade.
+                                    The backtester runs your agent in a sandboxed environment, simulating market conditions and verifying that valid x402 Proof-of-Reasoning traces are generated for every trade.
                                 </p>
                             </motion.div>
                         )}

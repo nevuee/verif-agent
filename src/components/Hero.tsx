@@ -27,16 +27,16 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-black"></span>
             </span>
-            <span className="text-xs text-black font-semibold tracking-wide uppercase">0xVRE Mainnet Live</span>
+            <span className="text-xs text-black font-semibold tracking-wide uppercase">x402 Mainnet Live</span>
           </div>
 
           <h1 className="text-6xl md:text-8xl font-bold text-black mb-8 tracking-tighter leading-[0.95]">
             Trustless AI,<br />
-            <span className="bg-gradient-to-r from-gray-600 via-gray-300 to-gray-600 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">Verified.</span>
+            <span className="bg-gradient-to-r from-gray-600 via-gray-300 to-gray-600 bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">x402 Verified.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-            The accountability layer for autonomous agents. We provide <span className="text-black font-medium underline decoration-gray-300 underline-offset-4">zk-SNARK proofs</span> for every AI inference.
+            The accountability layer for autonomous agents. We provide <span className="text-black font-medium underline decoration-gray-300 underline-offset-4">x402 zk-SNARK proofs</span> for every AI inference.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">

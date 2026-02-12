@@ -38,7 +38,7 @@ export default function ProtocolPage() {
                             <h3 className="text-xl font-bold text-black mb-2">Invalid Proofs</h3>
                             <div className="text-red-600 font-mono text-xs uppercase font-bold mb-3 tracking-wider">100% SLASH</div>
                             <p className="text-gray-600 text-sm">
-                                Submitting a ZK-proof that fails cryptographic verification or contradicts the referenced reasoning trace results in immediate total stake forfeiture.
+                                Submitting a ZK-proof that fails cryptographic verification or contradicts the referenced x402 reasoning trace results in immediate total stake forfeiture.
                             </p>
                         </div>
 

@@ -44,9 +44,9 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-background text-foreground">
       <Hero />
+      <VeriAgentApp />
       <ProblemStatement />
       <Solution />
-      <VeriAgentApp />
       <FAQ />
     </main>
   );

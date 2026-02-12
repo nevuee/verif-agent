@@ -17,8 +17,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "0xVRE | Proof-of-Reasoning Layer",
-  description: "The accountability layer for autonomous AI agents. Verify reasoning execution with ZK-SNARKs.",
+  title: "0xVRE | x402 Proof-of-Reasoning Layer",
+  description: "The accountability layer for autonomous AI agents. Verify reasoning execution with x402 ZK-SNARKs.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,

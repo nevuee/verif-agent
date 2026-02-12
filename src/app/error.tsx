@@ -35,19 +35,19 @@ export default function Error({
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <button
-                        onClick={reset}
+                        onClick={() => window.location.reload()}
                         className="px-8 py-3 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-all flex items-center gap-2 shadow-lg"
                     >
                         <RefreshCw className="w-4 h-4" />
                         Retry Handshake
                     </button>
-                    <Link
-                        href="/"
+                    <button
+                        onClick={() => window.location.href = '/'}
                         className="px-8 py-3 bg-gray-100 text-gray-700 font-bold rounded-xl hover:bg-gray-200 transition-all flex items-center gap-2"
                     >
                         <Home className="w-4 h-4" />
                         Return Home
-                    </Link>
+                    </button>
                 </div>
             </div>
         </main>

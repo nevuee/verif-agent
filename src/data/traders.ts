@@ -157,7 +157,7 @@ export const aiTraders: AITrader[] = [
     marketCap: 4120000,
     expectedReturn: 22.5,
     startedAt: "21 days ago",
-    creator: "@pulse-tech",
+    creator: "@pulse-x402",
     trend: "up",
     totalTrades: 1567,
     successfulTrades: 1063,

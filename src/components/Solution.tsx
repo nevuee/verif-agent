@@ -12,12 +12,12 @@ const steps = [
     {
         icon: <Cpu className="w-6 h-6" />,
         title: "2. Reasoning Trace",
-        description: "For every task, the agent generates a cryptographically signed Reasoning Trace (Inputs -> Deductions -> Logic).",
+        description: "For every task, the agent generates a cryptographically signed x402 Reasoning Trace (Inputs -> Deductions -> Logic).",
     },
     {
         icon: <ShieldCheck className="w-6 h-6" />,
         title: "3. ZK Verification",
-        description: "A ZK-SNARK/STARK proof is generated to prove the decision adhered to safety rules without revealing private IP.",
+        description: "A x402 ZK-SNARK/STARK proof is generated to prove the decision adhered to safety rules without revealing private IP.",
     },
     {
         icon: <Scale className="w-6 h-6" />,
@@ -35,7 +35,7 @@ export default function Solution() {
                         The Solution
                     </div>
                     <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
-                        Proof-of-Reasoning <span className="text-gray-400">(PoR)</span>
+                        x402 Proof-of-Reasoning <span className="text-gray-400">(PoR)</span>
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         A trustless protocol that mandates verifying the "thought process" before the action.
