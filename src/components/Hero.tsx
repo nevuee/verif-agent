@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ShieldCheck, Activity, Lock, FileCode } from 'lucide-react';
+import { ShieldCheck, Activity, Lock } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -44,10 +44,7 @@ export default function Hero() {
               Deploy Agent
               <Activity className="w-5 h-5 group-hover:rotate-12 transition-transform" />
             </a>
-            <a href="#verify" className="group px-8 py-4 bg-white text-black border border-gray-200 rounded-2xl font-bold text-lg hover:bg-gray-50 transition-all hover:border-black/20 hover:scale-[1.02] flex items-center gap-3 shadow-lg hover:shadow-xl">
-              Verify Proof
-              <FileCode className="w-5 h-5 text-gray-500 group-hover:text-black transition-colors" />
-            </a>
+
           </div>
           {/* Scroll indicator - below buttons */}
           <motion.div
